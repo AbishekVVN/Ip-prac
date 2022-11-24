@@ -1,0 +1,44 @@
+<!DOCTYPE! html>
+<html>
+<head>
+<title>Quiz Application</title>
+</head>
+<style>
+body{background-color:powderblue;}
+h1{color:blue;}
+p{color:red;}
+</style>
+
+<body>
+<h1>Quiz Application</h1>
+<p>
+1.What is 2+3?<br> 
+<input type="radio" name="Question1" id="correct1">5<br>
+<input type="radio" name="Question1">8<br>
+<input type="radio" name="Question1">10<br>
+<input type="radio" name="Question1">9<br>
+2.what is 3-2?<br>
+<input type="radio" name="Question2">5<br>
+<input type="radio" name="Question2">8<br>
+<input type="radio" name="Question2" id="correct2">1<br>
+<input type="radio" name="Question2">9<br>
+</p>
+
+<input type ="submit" name="submit" value="SubmitQuiz" onclick="result()">
+<script type="text/javascript">
+function result()
+{
+var score=0;
+if(document.getElementById('correct1').checked)
+{
+score++;
+}
+if(document.getElementById('correct2').checked)
+{
+score++;
+}
+document.write("Your Score is:"+score);
+}
+</script>
+</body>
+</html>
